@@ -1,0 +1,167 @@
+/* Dashboard Client - Style Yummy */
+
+/* Couleurs principales */
+:root {
+  --primary-color: #ff6b6b;       /* Rouge clair principal */
+  --primary-dark: #ff4757;        /* Rouge plus foncé */
+  --primary-light: #ff8787;       /* Rouge plus clair */
+  --secondary-color: #f8f9fa;     /* Fond clair */
+  --dark-color: #343a40;          /* Texte foncé */
+  --light-color: #ffffff;         /* Blanc */
+  --accent-color: #ffa502;        /* Couleur d'accent orangé */
+  --success-color: #2ed573;       /* Vert pour statuts */
+  --warning-color: #ffa502;       /* Orange pour statuts */
+  --danger-color: #ff4757;        /* Rouge pour statuts */
+}
+
+/* Bannière d'accueil */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border: none;
+  box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+}
+
+.bg-gradient-primary .btn-light {
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.bg-gradient-primary .btn-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Cartes */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.15);
+}
+
+.card-header {
+  background-color: var(--light-color);
+  border-bottom: 2px solid var(--primary-light);
+  font-weight: 600;
+}
+
+.card-header h5 {
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+/* Tableau des commandes */
+.table {
+  color: var(--dark-color);
+}
+
+.table thead th {
+  border-bottom: 2px solid var(--primary-light);
+  font-weight: 600;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 107, 107, 0.05);
+}
+
+/* Badges de statut */
+.badge {
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+}
+
+.badge.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+.badge.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+
+.badge.bg-danger {
+  background-color: var(--danger-color) !important;
+}
+
+/* Cartes des plats populaires */
+.card-img-top {
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Boutons */
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* Section À propos */
+.table-sm td {
+  padding: 0.5rem;
+}
+
+.table-sm tr:first-child td {
+  border-top: none;
+}
+
+/* Icônes */
+.fas {
+  color: var(--primary-color);
+}
+
+.card-header .fas {
+  color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bg-gradient-primary {
+    text-align: center;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .card-img-top {
+    height: 150px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Délai d'animation pour les cartes */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
